@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div>
         <Navbar />
-        <h1 className="text-4xl font-bold text-center mt-16">Andrea's Portfolio</h1>
+        <h1 className="text-4xl font-bold text-center mt-16">{"Andrea's Portfolio"}</h1>
 
         {/* Temporary About Section */}
         <section id="about" className="max-w-6xl mx-auto px-8 py-24">
