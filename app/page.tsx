@@ -1,8 +1,11 @@
 import Image from "next/image";
+import Link from "next/link"; // for navigating between routes which we are not doing yet
+import Navbar from "./components/Navbar";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
+    <div>
+        <Navbar />
         <h1 className="text-4xl font-bold text-center mt-16">Andrea's Portfolio</h1>
     </div>
   );
