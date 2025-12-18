@@ -4,17 +4,15 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About"
 import Projects from "./components/Projects"
+import Contact from "./components/Contact"
 
 export default function Home() {
   return (
     <div>
-
         <Hero />
         <About />
         <Projects />
-        <h1 className="text-4xl font-bold text-center mt-16">{"Andrea's Portfolio"}</h1>
-
-
+        <Contact />
     </div>
   );
 }
