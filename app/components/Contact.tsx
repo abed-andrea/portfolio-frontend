@@ -7,14 +7,38 @@ export default function Contact() {
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
 
-    function handleSubmit(e: React.FormEvent<HTMLFormElement>){
-      e.preventDefault();
+    async function handleSubmit(e: any){
+      e.preventDefault() // Stop browswer from refreshing the page
 
-      console.log({name, email, message});
+      // Build the JSON object we want to send to the backend
+      const payload = {
+        name: name,
+        email: email,
+        message: message
+      };
 
-      setName("");
-      setEmail("");
-      setMessage("");
+      try{
+        // Send POST request to backend, Store reply in "res"
+        const res = await fetch("http://localhost:8000/contact", {
+          method: "POST",
+          headers: {"Content-Type": "application/json"},
+          body: JSON.stringify(payload) // Convert JS object into JSON
+        });
+
+        console.log("status: ", res.status);
+
+        const data = await res.json(); // Convert JSON object back into JS object
+        console.log("response:", data);
+
+
+        // Clear Input States
+        setName("");
+        setEmail("");
+        setMessage("");
+
+      } catch(error) {
+        console.error("Failed to submit contact form: ", error);
+      }
     }
 
     return (
@@ -84,7 +108,6 @@ export default function Contact() {
                   className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-300"
                 />
 
-                {/* Submit Button */}
                 <button
                   type="submit"
                   className="w-full rounded-xl bg-slate-900 px-5 py-3 text-sm font-medium text-white"
@@ -93,7 +116,7 @@ export default function Contact() {
                 </button>
               </form>
 
-
+              
             </div>
           </div>
         </div>
