@@ -2,6 +2,7 @@
 import React, {useState} from "react";
 
 export default function Contact() {
+    console.log("API:", process.env.NEXT_PUBLIC_API_URL);
 
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -19,7 +20,7 @@ export default function Contact() {
 
       try{
         // Send POST request to backend, Store reply in "res"
-        const res = await fetch("http://localhost:8000/contact", {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/contact`, {
           method: "POST",
           headers: {"Content-Type": "application/json"},
           body: JSON.stringify(payload) // Convert JS object into JSON
