@@ -2,7 +2,6 @@
 import React, {useState} from "react";
 
 export default function Contact() {
-    console.log("API:", process.env.NEXT_PUBLIC_API_URL);
 
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
