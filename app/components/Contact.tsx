@@ -1,5 +1,5 @@
 "use client";
-import {useState} from "react";
+import React, {useState} from "react";
 
 export default function Contact() {
 
@@ -7,7 +7,7 @@ export default function Contact() {
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
 
-    async function handleSubmit(e: any){
+    async function handleSubmit(e: React.FormEvent<HTMLFormElement>){
       e.preventDefault() // Stop browswer from refreshing the page
 
       // Build the JSON object we want to send to the backend
