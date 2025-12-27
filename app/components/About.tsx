@@ -19,7 +19,7 @@ export default function About() {
                 
                 {/* Photo */}
                 <div
-                  className="w-full max-w-md h-110 rounded-3xl bg-cover bg-center shadow-lg"
+                  className="w-full max-w-sm h-90 rounded-3xl bg-cover bg-center shadow-lg"
                   style={{ backgroundImage: "url(/my-photo.jpeg)" }}
                 />
       
@@ -110,7 +110,7 @@ export default function About() {
 
 
                 <div
-                  className="w-full max-w-md h-72 rounded-3xl bg-cover bg-center shadow-lg"
+                  className="w-full max-w-sm h-60 rounded-3xl bg-cover bg-center shadow-lg"
                   style={{ backgroundImage: "url(/gwc-photo.jpeg)" }}
                 />
       
