@@ -69,7 +69,7 @@ export default function Projects() {
                         href="/reports/process-report.pdf"
                         target="_blank"
                         rel="noreferrer"
-                        className="inline-flex items-center gap-2 rounded-xl bg-slate-900 px-4 py-2 text-sm font-medium text-white hover:bg-blue-500"
+                        className="inline-flex items-center gap-2 rounded-xl bg-slate-900 px-4 py-2 text-sm font-medium text-white hover:bg-slate-800"
                       >
                         Report →
                       </a>
@@ -100,7 +100,7 @@ export default function Projects() {
                         href="/reports/cpu-alg-report.pdf"
                         target="_blank"
                         rel="noreferrer"
-                        className="inline-flex items-center gap-2 rounded-xl bg-slate-900 px-4 py-2 text-sm font-medium text-white hover:bg-blue-500"
+                        className="inline-flex items-center gap-2 rounded-xl bg-slate-900 px-4 py-2 text-sm font-medium text-white hover:bg-slate-800"
                       >
                         Report →
                       </a>
