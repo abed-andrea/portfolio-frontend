@@ -31,21 +31,15 @@ export default function About() {
             {/* Text */}
             <div className="mt-8 text-slate-700 leading-relaxed text-sm">
               <p>
-                I recently graduated from San Diego State University with a
-                Bachelor's degree in Computer Science and am currently seeking
-                entry-level software engineering opportunities.
+                {"I recently graduated from San Diego State University with a Bachelor's degree in Computer Science and am currently seeking entry-level software engineering opportunities."}
               </p>
 
               <p className="mt-4">
-                I value clear communication, collaboration, and continuous
-                improvement. I take feedback seriously, care about producing
-                quality work, and enjoy being part of teams where people support
-                and learn from one another.
+                {"I value clear communication, collaboration, and continuous improvement. I take feedback seriously, care about producing quality work, and enjoy being part of teams where people support and learn from one another."}
               </p>
 
               <p className="mt-4">
-                Outside of tech, I enjoy spending time at the beach, playing
-                tennis, hiking, and exploring new coffee shops.
+                {"Outside of tech, I enjoy spending time at the beach, playing tennis, hiking, and exploring new coffee shops."}"
               </p>
             </div>
           </div>
@@ -65,7 +59,7 @@ export default function About() {
                   AI/ML Research Assistant
                 </h4>
                 <p className="mt-2 text-sm leading-relaxed">
-                I worked as part of a research group on an ongoing machine learning project, where I contributed to literature reviews and gained hands-on experience working with the code. I helped run and evaluate a ResNet model in PyTorch to compare its performance with other approaches, building familiarity with data preprocessing, training workflows, and evaluating results.
+                {"I worked as part of a research group on an ongoing machine learning project, where I contributed to literature reviews and gained hands-on experience working with the code. I helped run and evaluate a ResNet model in PyTorch to compare its performance with other approaches, building familiarity with data preprocessing, training workflows, and evaluating results."}
                 </p>
               </div>
 
@@ -74,10 +68,7 @@ export default function About() {
                   Vice President, Girls Who Code
                 </h4>
                 <p className="mt-2 text-sm leading-relaxed">
-                  Alongside a friend, I helped reinitiate our campus Girls
-                  Who Code chapter and grow it into an active, welcoming community.
-                  I organized workshops, coordinated industry speakers, and built
-                  an inclusive space for women in tech.
+                  {"Alongside a friend, I helped reinitiate our campus Girls Who Code chapter and grow it into an active, welcoming community. I organized workshops, coordinated industry speakers, and built an inclusive space for women in tech."}
                 </p>
               </div>
 
@@ -86,7 +77,7 @@ export default function About() {
                   Team Manager, Panera Bread
                 </h4>
                 <p className="mt-2 text-sm leading-relaxed">
-                  Managing a team in a fast-paced environment over the past few years has strengthened my communication skills, adaptability, and ability to lead with empathy. I carry that mindset into software engineering by collaborating effectively, responding to feedback, and continuously improving.
+                  {"Managing a team in a fast-paced environment over the past few years has strengthened my communication skills, adaptability, and ability to lead with empathy. I carry that mindset into software engineering by collaborating effectively, responding to feedback, and continuously improving."}
                 </p>
               </div>
             </div>
