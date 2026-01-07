@@ -39,7 +39,7 @@ export default function About() {
               </p>
 
               <p className="mt-4">
-                {"Outside of tech, I enjoy spending time at the beach, playing tennis, hiking, and exploring new coffee shops."}"
+                {"Outside of tech, I enjoy spending time at the beach, playing tennis, hiking, and exploring new coffee shops."}
               </p>
             </div>
           </div>
