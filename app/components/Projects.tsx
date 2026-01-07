@@ -13,19 +13,19 @@ export default function Projects() {
             </div>
 
           {/* Project cards */}
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 items-stretch">
                 
                 {/* Card 1 */}
-                <div className="rounded-xl border bg-white p-6 shadow-sm">
-                    <h3 className="text-xl font-semibold text-slate-900">PC Builder Web App</h3>
-                    <p className="mt-3 text-sm leading-relaxed text-slate-600">
+                <div className="flex h-full flex-col rounded-xl border bg-white p-6 shadow-sm">
+                    <h3 className="text-center text-xl font-semibold text-slate-900">PC Builder Web App</h3>
+                    <p className="mt-3 min-h-[96px] text-center text-sm leading-relaxed text-slate-600">
                       Full-stack web app for browsing PC parts and creating compatible
                       builds. Built with a FastAPI backend and PostgreSQL database, with a modern
                       frontend.
                     </p>
 
 
-                    <div className="mt-5 flex flex-wrap gap-2">
+                    <div className="mt-5 flex flex-wrap justify-center gap-2">
                     {["FastAPI", "PostgreSQL", "Docker", "Next.js"].map((t) => (
                       <span
                         key={t}
@@ -36,7 +36,7 @@ export default function Projects() {
                     ))}
                   </div>
 
-                  <div className="mt-6">
+                  <div className="mt-auto pt-6">
                     <a
                       href="https://github.com/SDSU-CompE-561-Spring-2025/custom-pc-parts-ecom"
                       target="_blank"
@@ -49,11 +49,11 @@ export default function Projects() {
                 </div>
 
                 {/* Card 2 */}
-                <div className="rounded-xl border bg-white p-6 shadow-sm">
+                <div className="flex h-full flex-col rounded-xl border bg-white p-6 shadow-sm">
 
-                    <h3 className="text-xl font-semibold text-slate-900">Process Creation and Destruction</h3>
-                    <p className="mt-3 text-sm leading-relaxed text-slate-600">C program to model process creation, management, and destruction in an operating system. Focused on efficient data structures to represent parent–child process relationships.</p>
-                    <div className="mt-5 flex flex-wrap gap-2">
+                    <h3 className="text-center text-xl font-semibold text-slate-900">Process Creation {"/"} Destruction</h3>
+                    <p className="mt-3 min-h-[96px] text-center text-sm leading-relaxed text-slate-600">C program to model process creation, management, and destruction in an operating system. Focused on efficient data structures to represent parent–child process relationships.</p>
+                    <div className="mt-5 flex flex-wrap justify-center gap-2">
                       {["C", "Operating Systems", "Data Structures"].map((t) => (
                         <span
                           key={t}
@@ -64,7 +64,7 @@ export default function Projects() {
                       ))}
                     </div>
 
-                    <div className="mt-6">
+                    <div className="mt-auto pt-6">
                       <a
                         href="/reports/process-report.pdf"
                         target="_blank"
@@ -80,11 +80,11 @@ export default function Projects() {
                 
 
                 {/* Card 3 */}
-                <div className="rounded-xl border bg-white p-6 shadow-sm">
+                <div className="flex h-full flex-col rounded-xl border bg-white p-6 shadow-sm">
 
-                    <h3 className="text-xl font-semibold text-slate-900">CPU Scheduling Algorithms</h3>
-                    <p className="mt-3 text-sm leading-relaxed text-slate-600">C program that simulates common CPU scheduling algorithms including FCFS, SRTF, Priority, and Round Robin, with performance metrics and execution order visualization.</p>
-                    <div className="mt-5 flex flex-wrap gap-2">
+                    <h3 className="text-center text-xl font-semibold text-slate-900">CPU Scheduling Algorithms</h3>
+                    <p className="mt-3 min-h-[96px] text-center text-sm leading-relaxed text-slate-600">C program that simulates common CPU scheduling algorithms including FCFS, SRTF, Priority, and Round Robin, with performance metrics and execution order visualization.</p>
+                    <div className="mt-5 flex flex-wrap justify-center gap-2">
                       {["C", "Scheduling", "Operating Systems"].map((t) => (
                         <span
                           key={t}
@@ -95,7 +95,7 @@ export default function Projects() {
                       ))}
                     </div>
 
-                    <div className="mt-6">
+                    <div className="mt-auto pt-6">
                       <a
                         href="/reports/cpu-alg-report.pdf"
                         target="_blank"
