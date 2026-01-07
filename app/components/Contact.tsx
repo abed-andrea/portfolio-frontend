@@ -46,7 +46,7 @@ export default function Contact() {
         <div className="mx-auto w-full max-w-6xl px-6 py-24">
           {
           /* Heading */}
-            <div className="mb-16 text-center">
+            <div className="mb-5 text-center">
               <h2 className="text-5xl font-semibold text-slate-900">
                 Contact
               </h2>
@@ -60,7 +60,7 @@ export default function Contact() {
           <div className="grid gap-8 md:grid-cols-2">
             {/* Contact Info */}
             <div className="rounded-2xl border-2 border-orange-300 p-18 shadow-md"  style={{ backgroundColor: "oklch(98% 0.016 73.684)" }}>
-              <h3 className="text-center text-4xl font-semibold text-orange-300">Get In Touch</h3>
+              <h3 className="text-center text-4xl font-semibold text-slate-900">Get In Touch</h3>
 
 
               <div className="mt-10 space-y-7 text-slate-800">
@@ -118,7 +118,7 @@ export default function Contact() {
 
             {/* Message Form*/}
             <div className="rounded-2xl border-2 border-orange-300 p-18 shadow-md"  style={{ backgroundColor: "oklch(98% 0.016 73.684)" }}>
-              <h3 className="text-center text-4xl font-semibold text-orange-300">Send a Message</h3>
+              <h3 className="text-center text-4xl font-semibold text-slate-900">Send a Message</h3>
   
               <form onSubmit={handleSubmit} className="mt-8 space-y-5">
                 <input 
@@ -147,7 +147,7 @@ export default function Contact() {
 
                 <button
                   type="submit"
-                  className="inline-flex items-center gap-2 rounded-xl bg-slate-900 px-4 py-2 text-sm font-medium text-white hover:bg-slate-800"
+                  className="inline-flex cursor-pointer items-center gap-2 rounded-xl bg-slate-900 px-4 py-2 text-sm font-medium text-white hover:bg-slate-800"
                 >
                   Send Message
                 </button>
