@@ -82,7 +82,7 @@ export default function Contact() {
           {/* Two cards */}
           <div className="flex flex-col md:flex-row gap-8 text-stone-600 mb-10 max-w-4xl mx-auto w-full">
             {/* Contact Info */}
-            <div className="bg-stone-200 p-18 px-28">
+            <div className="bg-stone-200 w-full md:w-1/2 p-6 md:p-10">
             <h3 className="text-3xl text-center text-stone-900">Get in Touch</h3>
 
 
@@ -98,7 +98,7 @@ export default function Contact() {
               <div>
                 <p className="text-xl uppercase tracking-wide text-stone-500">Phone</p>
                 <p className="mt-1 block font-medium">
-                  {"(858) 705-9766"}
+                  {"(858) 705 - 9766"}
                 </p>
               </div>
   
@@ -141,7 +141,7 @@ export default function Contact() {
   
 
             {/* Message Form*/}
-            <div className="bg-stone-200 p-18">
+            <div className="bg-stone-200 w-full md:w-1/2 p-6 md:p-10">
             <h3 className="text-3xl text-center text-stone-900">Send a Message</h3>
   
               <form onSubmit={handleSubmit} className="mt-8 space-y-5">
