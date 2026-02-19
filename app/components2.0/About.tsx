@@ -24,7 +24,7 @@ export default function About() {
             {/* Picture */}
             <div className="overflow-hidden">
               <img
-                src="/gwc-photo.jpeg"
+                src="/gwc.jpeg"
                 alt="Girls Who Code"
                 className="w-full h-full object-cover object-top"
               />

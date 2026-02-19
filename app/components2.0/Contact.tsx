@@ -6,9 +6,30 @@ export default function Contact() {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
+   
+    const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+    const [errorMsg, setErrorMsg] = useState("");
+
 
     async function handleSubmit(e: React.FormEvent<HTMLFormElement>){
       e.preventDefault() // Stop browswer from refreshing the page
+
+      // reset feedback on new attempt
+      setStatus("idle");
+      setErrorMsg("");
+
+      // basic validation
+      if (!name.trim() || !email.trim() || !message.trim()) {
+        setStatus("error");
+        setErrorMsg("Please fill out your name, email, and message.");
+        return;
+      }
+
+      if (!email.includes("@") || !email.includes(".")) {
+        setStatus("error");
+        setErrorMsg("Please enter a valid email address.");
+        return;
+      }  
 
       // Build the JSON object we want to send to the backend
       const payload = {
@@ -18,6 +39,8 @@ export default function Contact() {
       };
 
       try{
+        setStatus("loading");
+
         // Send POST request to backend, Store reply in "res"
         const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/contact`, {
           method: "POST",
@@ -27,9 +50,16 @@ export default function Contact() {
 
         console.log("status: ", res.status);
 
+        if (!res.ok) {
+          setStatus("error");
+          setErrorMsg("Something went wrong. Please try again.");
+          return;
+        }
+
         const data = await res.json(); // Convert JSON object back into JS object
         console.log("response:", data);
 
+        setStatus("success");
 
         // Clear Input States
         setName("");
@@ -38,6 +68,8 @@ export default function Contact() {
 
       } catch(error) {
         console.error("Failed to submit contact form: ", error);
+        setStatus("error");
+        setErrorMsg("Network error. Please try again.");
       }
     }
 
@@ -119,6 +151,7 @@ export default function Contact() {
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   className="w-full bg-stone-100 px-4 py-3 text-stone-900 placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-stone-300"
+                  required
                 />
   
                 <input
@@ -127,6 +160,7 @@ export default function Contact() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className="w-full bg-stone-100 px-4 py-3 text-stone-900 placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-stone-300"
+                  required
                 />
   
                 <textarea
@@ -135,14 +169,27 @@ export default function Contact() {
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   className="w-full bg-stone-100 px-4 py-3 text-stone-900 placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-stone-300"
+                  required
                 />
 
                 <button
                   type="submit"
-                  className="inline-flex cursor-pointer items-center gap-2 bg-stone-900 px-4 py-2 text-sm font-medium text-stone-100 hover:bg-stone-800"
+                  disabled={status === "loading"}
+                  className="inline-flex cursor-pointer items-center gap-2 bg-stone-900 px-4 py-2 text-sm font-medium text-stone-100 hover:bg-stone-800 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Send Message
+                  {status === "loading" ? "Sending..." : "Send Message"}
                 </button>
+
+                {status === "success" && (
+                  <p className="text-sm text-green-700">Message sent! Thanks for reaching out.</p>
+                )}
+
+                {status === "error" && (
+                  <p className="text-sm text-red-700">
+                    {errorMsg || "Something went wrong. Please try again."}
+                    </p>
+                    )}
+
               </form>
 
               
